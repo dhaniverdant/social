@@ -1,0 +1,13 @@
+.card-wrapper {
+  background-color: #e8e8e8;
+  width: 80%;
+}
+
+.user-wrapper {
+  background-color: rgb(145, 145, 25);
+  width: 20%;
+  height: 190px;
+  float: left;
+  margin: 10px;
+  border-radius: 8px;
+}
