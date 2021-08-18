@@ -1,16 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import './UserList.css';
+import { UserContext } from '../../components/UserContext/UserContext'
 
 function UserList() {
-  // Declare a new state variable, which we'll call "count"
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(result => setItems(result));
-  });
+  const [items] = useContext(UserContext)
 
   return (
     <div className="card-wrapper">
