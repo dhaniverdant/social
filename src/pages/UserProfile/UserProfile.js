@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import UserAlbum from '../UserAlbum/UserAlbum';
-// import axios from 'axios';
-// import UserPost from '../UserPost/UserPost'
 import './UserProfile.css';
 
 const UserProfile = ({ match }) => {
@@ -31,7 +29,6 @@ const UserProfile = ({ match }) => {
           <div key={item.id} className="post-wrapper">
             <h4>{item.title}</h4>
             <div>{item.body}</div>
-            {/* <Link to={`/userProfile/${item.id}`} className="link"> */}
             <Link to={`/user/posts/${item.id}/comments`} className="link">
               <button>View Post Details</button>
             </Link>
