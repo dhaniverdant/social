@@ -12,12 +12,6 @@ const UserProfile = ({ match }) => {
   const [album, setAlbum] = useState([]);
 
   useEffect(() => {
-    // fetch('https://jsonplaceholder.typicode.com/posts?userId=' + match.params.id)
-    //   .then(res => res.json())
-    //   .then(result => setPost(result));
-    // fetch('https://jsonplaceholder.typicode.com/albums?userId=' + match.params.id)
-    //   .then(res => res.json())
-    //   .then(result => setAlbum(result));
     Promise.all([
       fetch('https://jsonplaceholder.typicode.com/posts?userId=' + match.params.id),
       fetch('https://jsonplaceholder.typicode.com/albums?userId=' + match.params.id)
