@@ -1,9 +1,7 @@
-// import React from 'react';
-// import UserPost from '../UserPost/UserPost';
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import UserAlbum from '../UserAlbum/UserAlbum';
-import './UserProfile.css';
+import './UserProfile.scss';
 
 const UserProfile = ({ match }) => {
   const [post, setPost] = useState([]);
