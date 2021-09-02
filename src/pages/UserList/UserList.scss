@@ -1,19 +1,39 @@
 .card-wrapper {
   background-color: #e8e8e8;
-  width: 80%;
-}
-
-.link {
-  color: black;
+  // width: 80%;
 }
 
 .user-wrapper {
   background-color: rgb(238, 238, 203);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 15%;
-  height: 200px;
+  height: 300px;
   float: left;
   margin: 10px;
   padding: 5px;
   border-radius: 8px;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px; 
+  background-color: black;
+}
+
+.show-profile-button {
+  background-color: rgb(10, 63, 45);
+  color: #fff;
+  width: 100% !important;
+  border: none;
+  outline: none;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
 }

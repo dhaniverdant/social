@@ -10,10 +10,13 @@ function UserList() {
     <div className="card-wrapper">
       {items.map(item => (
         <div key={item.id} className="user-wrapper">
-          <div>{item.name}</div>
-          <div>@{item.username}</div>
-          <Link to={`/user/${item.id}`} className="link">
-            <button>View Profile</button>
+          <div className="image-wrapper">
+            <div className="circle" />
+            <div>{item.name}</div>
+            <div>@{item.username}</div>
+          </div>
+          <Link to={`/user/${item.id}`}>
+            <button className="show-profile-button">View Profile</button>
           </Link>
         </div>
       ))}
