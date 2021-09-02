@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
-import './UserList.css';
+import './UserList.scss';
 import { UserContext } from '../../components/UserContext/UserContext'
 
 function UserList() {

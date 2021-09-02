@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './User.css';
+import './User.scss';
 
 // class App extends React.Component {
 //   constructor(props) {
