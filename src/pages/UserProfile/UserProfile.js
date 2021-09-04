@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import UserAlbum from '../UserAlbum/UserAlbum';
 import './UserProfile.scss';
 
@@ -18,9 +18,11 @@ const UserProfile = ({ match }) => {
         setAlbum(data2);
       })
   });
+  let history = useHistory();
 
   return (
     <div className="profile-wrapper">
+      <button onClick={() => history.goBack()}>Back to Home</button>
       THIS IS POSTS USER {match.params.id}
       <div>
         {post.map(item => (
