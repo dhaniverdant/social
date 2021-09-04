@@ -12,7 +12,7 @@ function UserList() {
         <div key={item.id} className="user-wrapper">
           <div className="image-wrapper">
             <div className="circle" />
-            <div>{item.name}</div>
+            <div className="user-name">{item.name}</div>
             <div>@{item.username}</div>
           </div>
           <Link to={`/user/${item.id}`}>
