@@ -16,7 +16,6 @@ const PhotoDetails = ({ match }) => {
           <div>Image details for ID {item.id}</div>
           <h4>{item.title}</h4>
           <img alt={item.id} src={item.url} />
-          <hr />
         </div>
       ))}
     </div>

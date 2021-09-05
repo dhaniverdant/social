@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { useParams } from 'react-router';
 import { Link } from "react-router-dom";
 
 const PhotoList = ({ match }) => {
@@ -15,11 +14,11 @@ const PhotoList = ({ match }) => {
     <div>
       {items.map(item => (
         <div key={item.id}>
-          {/* <h4>{item.title}</h4> */}
+          <h4>{item.title}</h4>
           <img alt={item.id} src={item.thumbnailUrl} />
           <br />
           <Link to={`/user/albums/${match.params.id}/photos/${item.id}`} className="link">
-            <button>View Album Details</button>
+            <button>View Photo Details</button>
           </Link>
           <hr />
         </div>
