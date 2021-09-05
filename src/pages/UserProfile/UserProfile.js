@@ -5,7 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import UserAlbum from '../UserAlbum/UserAlbum';
 import './UserProfile.scss';
 
-const UserProfile = ({ match, name }) => {
+const UserProfile = ({ match }) => {
   const [post, setPost] = useState([]);
   const [album, setAlbum] = useState([]);
 
