@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { useParams } from 'react-router';
 
 const PostDetails = ({ match }) => {
   const [items, setItems] = useState([]);
@@ -12,6 +11,7 @@ const PostDetails = ({ match }) => {
 
   return (
     <div>
+      <div>comments : {items.length}</div>
       {items.map(item => (
         <div key={item.id}>
           <h4>{item.email}</h4>
