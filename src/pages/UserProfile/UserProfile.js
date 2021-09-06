@@ -8,16 +8,19 @@ import './UserProfile.scss';
 const UserProfile = ({ match }) => {
   const [post, setPost] = useState([]);
   const [album, setAlbum] = useState([]);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     Promise.all([
       fetch('https://jsonplaceholder.typicode.com/posts?userId=' + match.params.id),
-      fetch('https://jsonplaceholder.typicode.com/albums?userId=' + match.params.id)
+      fetch('https://jsonplaceholder.typicode.com/albums?userId=' + match.params.id),
+      fetch('https://jsonplaceholder.typicode.com/comments?postId=' + match.params.id)
     ])
-      .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
-      .then(([data1, data2]) => {
+      .then(([res1, res2, res3]) => Promise.all([res1.json(), res2.json(), res3.json()]))
+      .then(([data1, data2, data3]) => {
         setPost(data1);
         setAlbum(data2);
+        setComments(data3);
       })
   });
   let history = useHistory();
@@ -38,6 +41,7 @@ const UserProfile = ({ match }) => {
               <div key={item.id} className="post-wrapper">
                 <h4>{item.title}</h4>
                 <div>{item.body}</div>
+                <div>comments : { comments.length }</div>
                 <Link to={`/user/posts/${item.id}/comments`} className="link">
                   <button>View Post Details</button>
                 </Link>
@@ -48,7 +52,7 @@ const UserProfile = ({ match }) => {
         <TabPanel>
           <div>
             {album.map(item => (
-              <UserAlbum id={item.id} title={item.title} item={item} />
+              <UserAlbum item={item} />
             ))}
           </div>
         </TabPanel>
