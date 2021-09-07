@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Post from '../Post/Post';
 import UserAlbum from '../UserAlbum/UserAlbum';
 import './UserProfile.scss';
 
@@ -38,14 +39,7 @@ const UserProfile = ({ match }) => {
         <TabPanel>
           <div>
             {post.map(item => (
-              <div key={item.id} className="post-wrapper">
-                <h4>{item.title}</h4>
-                <div>{item.body}</div>
-                <div>comments : { comments.length }</div>
-                <Link to={`/user/posts/${item.id}/comments`} className="link">
-                  <button>View Post Details</button>
-                </Link>
-              </div>
+              <Post item={item} comments={comments} />
             ))}
           </div>
         </TabPanel>
