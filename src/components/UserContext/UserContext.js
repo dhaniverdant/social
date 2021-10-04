@@ -9,7 +9,7 @@ export const UserProvider = (props) => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
       .then(result => setItems(result));
-  });
+  }, []);
 
   return (
     <UserContext.Provider value={[items, setItems]}>
